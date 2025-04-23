@@ -15,10 +15,10 @@ const milestoneSound = new Audio("score.mp3");
 
 // Objeto del dinosaurio
 let dino = {
-    x: 50,
-    y: canvas.height - 47,
-    width: 44,
-    height: 47,
+    x: 100,
+    y: canvas.height - 100,
+    width: 40,
+    height: 40,
     vy: 0,
     isJumping: false
 };
@@ -86,6 +86,7 @@ function update() {
 
         // Mostrar botón de reinicio
         document.getElementById("restartBtn").style.display = "block";
+        document.getElementById("manualRestartBtn").style.display = "block";
     }
 }
 
@@ -148,10 +149,12 @@ document.getElementById("restartBtn").addEventListener("click", function() {
 
 // Botón adicional para reinicio manual
 document.getElementById("manualRestartBtn").addEventListener("click", function() {
-    if (gameOver) {
+    //if (gameOver) {
         resetGame();
-        document.getElementById("restartBtn").style.display = "none";
-    }
+        this.style.display = "none";
+   // }
+    
+
 });
 
 // Función para reiniciar el juego
